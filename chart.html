@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ Vẽ Biểu đồ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h2>ATLAS ĐỊA LÍ: DỊCH VỤ ĐÔNG NAM Á (11 NƯỚC)</h2>
+        <div style="font-size: 0.9rem; color: #546e7a;">Công cụ hỗ trợ học tập và phân tích số liệu</div>
+    </header> 
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-item">📖 Giới thiệu</a>
+        <a href="map.html" class="nav-item">🗺️ Bản đồ</a>
+        <a href="compare.html" class="nav-item">⚖️ So sánh</a>
+        <a href="chart.html" class="nav-item active">📈 Vẽ Biểu đồ</a>
+    </nav>
+
+    <div class="page-content">
+        <h1>📈 Công cụ Vẽ Biểu đồ Tự động</h1>
+        <p class="intro-text">Nhập dữ liệu vào các ô bên dưới để tạo biểu đồ trực quan. Hỗ trợ vẽ biểu đồ đường (thể hiện tiến trình), biểu đồ tròn (thể hiện cơ cấu) và biểu đồ cột (so sánh).</p>
+
+        <div class="chart-input-area">
+            <div class="input-group">
+                <label>1. Nhập tên các đối tượng (cách nhau bằng dấu phẩy):</label>
+                <input type="text" id="labelsInput" placeholder="Ví dụ: Nông nghiệp, Công nghiệp, Dịch vụ">
+            </div>
+
+            <div class="input-group">
+                <label>2. Nhập số liệu tương ứng (cách nhau bằng dấu phẩy):</label>
+                <input type="text" id="dataInput" placeholder="Ví dụ: 15, 35, 50">
+            </div>
+
+            <div class="input-group">
+                <label>3. Tên biểu đồ:</label>
+                <input type="text" id="titleInput" placeholder="Ví dụ: Cơ cấu kinh tế năm 2023">
+            </div>
+
+            <div class="chart-controls">
+                <select id="chartType">
+                    <option value="bar">📊 Biểu đồ Cột (Bar)</option>
+                    <option value="line">📉 Biểu đồ Đường (Line)</option>
+                    <option value="pie">🍕 Biểu đồ Tròn (Pie)</option>
+                </select>
+                <button onclick="drawUserChart()">VẼ BIỂU ĐỒ NGAY</button>
+            </div>
+            <p id="errorMsg" style="color: #d50000; text-align: center; display: none; margin-top: 10px; font-weight: bold;"></p>
+        </div>
+
+        <div class="chart-display-area">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="chart-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ So sánh Dịch vụ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>ATLAS ĐỊA LÍ: DỊCH VỤ ĐÔNG NAM Á (11 NƯỚC)</h2>
+        <div style="font-size: 0.9rem; color: #546e7a;">Kéo thả cờ để so sánh chỉ số dịch vụ</div>
+    </header> 
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-item">📖 Giới thiệu</a>
+        <a href="map.html" class="nav-item">🗺️ Bản đồ</a>
+        <a href="compare.html" class="nav-item active">⚖️ So sánh</a>
+        <a href="chart.html" class="nav-item">📈 Vẽ Biểu đồ</a>
+    </nav>
+
+    <div class="page-content">
+        <h1>⚖️ Cán cân Dịch vụ</h1>
+        <p class="intro-text">Kéo cờ của hai quốc gia lên cán cân để xem nước nào có ngành dịch vụ phát triển mạnh hơn.</p>
+        
+        <div class="scale-area">
+            <div class="scale-base"></div><div class="scale-pivot"></div>
+            <div class="scale-beam-wrapper">
+                <div class="scale-beam" id="scaleBeam">
+                    <div class="scale-pan left" id="leftPan"><div class="country-on-pan" id="leftCountry"></div><div class="pan-label">Bên A</div></div>
+                    <div class="scale-pan right" id="rightPan"><div class="country-on-pan" id="rightCountry"></div><div class="pan-label">Bên B</div></div>
+                </div>
+            </div>
+            <div class="comparison-info" id="comparisonInfo"><p>Kéo cờ vào cán cân để so sánh.</p></div>
+        </div>
+
+        <h3>Danh sách quốc gia</h3>
+        <div class="country-flags" id="countryFlags"></div>
+
+        <div class="comparison-details" id="comparisonDetails" style="display: none;">
+            <div id="leftDetails"></div>
+            <div id="rightDetails"></div>
+        </div>
+    </div>
+    
+    <script src="compare-script.js"></script>
+</body>
+</html>

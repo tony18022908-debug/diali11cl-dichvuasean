@@ -23,45 +23,45 @@
     <div class="container">
         <div class="map-container">
             <svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
-
+                
                 <g id="south-asia" class="country-group neighbor-region"><path style="fill: var(--c-gray-region);" d="M0,0 L300,0 L300,50 L240,100 L210,330 L170,300 L150,230 L170,160 L100,160 L50,130 L0,100 Z" /></g>
                 <text x="150" y="50" class="region-text">NAM Á</text>
                 
                 <g id="east-asia" class="country-group neighbor-region"><path style="fill: var(--c-gray-region);" d="M300,0 L650,0 L650,150 L370,140 L320,120 L290,160 L260,160 L240,100 L300,50 Z" /></g>
                 <text x="475" y="50" class="region-text">ĐÔNG Á</text>
 
-                <g id="mm" class="country-group" onclick="showData('mm')"><path style="fill: var(--c-mm);" d="M240,100 L260,160 L260,280 L240,300 L260,330 L250,400 L240,430 L220,400 L210,330 L170,300 L150,230 L170,160 L240,100 Z" /></g>
+                <g id="mm" class="country-group" data-id="mm" onclick="showData('mm')"><path style="fill: var(--c-mm);" d="M240,100 L260,160 L260,280 L240,300 L260,330 L250,400 L240,430 L220,400 L210,330 L170,300 L150,230 L170,160 L240,100 Z" /></g>
                 <text x="210" y="260" class="map-text">MYANMAR</text>
 
-                <g id="la" class="country-group" onclick="showData('la')"><path style="fill: var(--c-la);" d="M260,160 L290,160 L330,190 L340,230 L335,300 L320,340 L300,330 L290,360 L280,360 L280,300 L270,300 L260,280 L260,160 Z" /></path></g>
+                <g id="la" class="country-group" data-id="la" onclick="showData('la')"><path style="fill: var(--c-la);" d="M260,160 L290,160 L330,190 L340,230 L335,300 L320,340 L300,330 L290,360 L280,360 L280,300 L270,300 L260,280 L260,160 Z" /></path></g>
                 <text x="300" y="260" class="map-text">LÀO</text>
 
-                <g id="vn" class="country-group" onclick="showData('vn')">
+                <g id="vn" class="country-group" data-id="vn" onclick="showData('vn')">
                     <path style="fill: var(--c-vn);" d="M340,230 L330,190 L290,160 L320,120 L370,140 L360,200 L350,340 L340,400 L320,430 L310,410 L320,340 L335,300 L340,230 Z" />
                     <circle style="fill: var(--c-vn);" cx="410" cy="300" r="5" /><text x="410" y="290" class="small-text" style="fill:#bf360c;">H.Sa</text>
                     <circle style="fill: var(--c-vn);" cx="430" cy="430" r="5" /><text x="430" y="420" class="small-text" style="fill:#bf360c;">T.Sa</text>
                 </g>
                 <text x="400" y="220" class="map-text" style="fill: #bf360c;">VIỆT NAM</text>
 
-                <g id="kh" class="country-group" onclick="showData('kh')"><path style="fill: var(--c-kh);" d="M300,350 L320,340 L310,400 L280,430 L280,360 L300,350 Z" /></g>
+                <g id="kh" class="country-group" data-id="kh" onclick="showData('kh')"><path style="fill: var(--c-kh);" d="M300,350 L320,340 L310,400 L280,430 L280,360 L300,350 Z" /></g>
                 <text x="300" y="380" class="map-text small-text">CAM</text> 
 
-                <g id="th" class="country-group" onclick="showData('th')"><path style="fill: var(--c-th);" d="M280,280 L290,300 L290,350 L280,430 L260,450 L250,430 L250,400 L260,330 L240,300 L260,280 Z" /></g>
+                <g id="th" class="country-group" data-id="th" onclick="showData('th')"><path style="fill: var(--c-th);" d="M280,280 L290,300 L290,350 L280,430 L260,450 L250,430 L250,400 L260,330 L240,300 L260,280 Z" /></path></g>
                 <text x="260" y="325" class="map-text small-text">THÁI LAN</text> 
 
-                <g id="my" class="country-group" onclick="showData('my')">
+                <g id="my" class="country-group" data-id="my" onclick="showData('my')">
                     <path style="fill: var(--c-my);" d="M260,450 L280,430 L290,465 L295,510 L275,515 L260,460 Z" /> 
                     <path style="fill: var(--c-my);" d="M370,480 L500,470 L510,520 L380,540 Z" />
                 </g>
                 <text x="440" y="510" class="map-text small-text">MALAYSIA</text>
 
-                <g id="sg" class="country-group" onclick="showData('sg')"><circle style="fill: #d50000;" cx="290" cy="525" r="6" /></g>
+                <g id="sg" class="country-group" data-id="sg" onclick="showData('sg')"><circle style="fill: #d50000;" cx="290" cy="525" r="6" /></g>
                 <text x="290" y="540" class="map-text small-text">SINGAPORE</text>
 
-                <g id="bn" class="country-group" onclick="showData('bn')"><path style="fill: var(--c-bn);" d="M485,490 L505,490 L495,510 Z" /></g>
+                <g id="bn" class="country-group" data-id="bn" onclick="showData('bn')"><path style="fill: var(--c-bn);" d="M485,490 L505,490 L495,510 Z" /></g>
                 <text x="495" y="480" class="map-text small-text">BRUNEI</text>
 
-                <g id="id" class="country-group" onclick="showData('id')">
+                <g id="id" class="country-group" data-id="id" onclick="showData('id')">
                     <path style="fill: var(--c-id);" d="M180,500 L250,540 L280,570 L260,590 L180,550 Z" /> 
                     <path style="fill: var(--c-id);" d="M290,600 L420,590 L410,620 L290,620 Z" /> 
                     <path style="fill: var(--c-id);" d="M380,540 L510,520 L500,580 L420,580 Z" /> 
@@ -71,10 +71,10 @@
                 </g>
                 <text x="360" y="600" class="map-text">INDONESIA</text>
 
-                <g id="tl" class="country-group" onclick="showData('tl')"><path style="fill: var(--c-tl);" d="M592,615 L615,610 L620,625 L600,635 Z" /></g>
+                <g id="tl" class="country-group" data-id="tl" onclick="showData('tl')"><path style="fill: var(--c-tl);" d="M592,615 L615,610 L620,625 L600,635 Z" /></g>
                 <text x="610" y="650" class="map-text small-text">ĐÔNG TIMOR</text>
 
-                <g id="ph" class="country-group" onclick="showData('ph')">
+                <g id="ph" class="country-group" data-id="ph" onclick="showData('ph')">
                     <path style="fill: var(--c-ph);" d="M570,180 L610,160 L640,230 L600,260 Z" /> 
                     <path style="fill: var(--c-ph);" d="M600,280 L640,290 L620,330 Z" /> 
                     <path style="fill: var(--c-ph);" d="M600,350 L650,340 L650,400 L600,410 Z" /> 
@@ -82,6 +82,9 @@
                 <text x="670" y="230" class="map-text">PHILIPPINES</text>
 
             </svg>
+            
+            <div id="hover-tooltip"></div>
+            
         </div>
 
         <div class="info-panel">
@@ -102,6 +105,6 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>

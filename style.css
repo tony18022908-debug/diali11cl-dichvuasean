@@ -103,10 +103,10 @@ svg { width: 100%; height: 100%; filter: drop-shadow(3px 5px 4px rgba(0,0,0,0.2)
 
 .scale-area { width: 100%; max-width: 800px; margin: 50px auto 30px auto; position: relative; height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
 .scale-base { width: 200px; height: 20px; background-color: #616161; border-radius: 5px; position: absolute; bottom: 0; z-index: 1; }
-.scale-pivot { width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 50px solid #424242; position: absolute; bottom: 20px; z-index: 2; }
+.scale-pivot { width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 15px solid #455a64; position: absolute; bottom: 20px; z-index: 2; }
 .scale-beam-wrapper { width: 100%; position: absolute; bottom: 60px; height: 50px; display: flex; justify-content: center; align-items: center; }
 .scale-beam { width: 500px; height: 10px; background-color: #757575; border-radius: 5px; position: relative; display: flex; justify-content: space-between; align-items: center; transition: transform 0.5s ease-out; transform-origin: center bottom; }
-.scale-pan { width: 100px; height: 100px; background-color: #e0e0e0; border: 2px solid #bdbdbd; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 50%; transform: translateY(-50%); box-shadow: inset 0 0 10px rgba(0,0,0,0.1); }
+.scale-pan { width: 120px; height: 100px; background-color: #e0e0e0; border: 2px solid #bdbdbd; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 50%; transform: translateY(-50%); box-shadow: inset 0 0 10px rgba(0,0,0,0.1); }
 .scale-pan.left { left: -50px; } .scale-pan.right { right: -50px; }
 .scale-pan.drag-over { border: 2px dashed #d50000; background-color: #ffcdd2; }
 .country-on-pan { min-width: 60px; min-height: 40px; display: flex; justify-content: center; align-items: center; }
@@ -129,91 +129,30 @@ svg { width: 100%; height: 100%; filter: drop-shadow(3px 5px 4px rgba(0,0,0,0.2)
 .score-container { margin-top: 5px; background-color: #e0e0e0; border-radius: 4px; height: 8px; width: 100%; overflow: hidden; }
 .score-bar { height: 100%; background-color: #4caf50; width: 0%; transition: width 1s ease-in-out; }
 .score-bar.high { background-color: #2e7d32; } .score-bar.med { background-color: #fbc02d; } .score-bar.low { background-color: #c62828; }
-/* --- ĐỊNH DẠNG RIÊNG CHO TRANG VẼ BIỂU ĐỒ (chart.html) --- */
 
-.chart-input-area {
-    background-color: #f5f7f8;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #cfd8dc;
-    margin-bottom: 30px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
-}
+.chart-input-area { background-color: #f5f7f8; padding: 25px; border-radius: 8px; border: 1px solid #cfd8dc; margin-bottom: 30px; box-shadow: inset 0 0 10px rgba(0,0,0,0.03); }
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; font-weight: 600; color: #37474f; margin-bottom: 5px; font-size: 0.95rem; }
+.input-group input { width: 100%; padding: 12px; border: 1px solid #b0bec5; border-radius: 4px; font-size: 1rem; box-sizing: border-box; transition: border 0.2s; }
+.input-group input:focus { border-color: #0277bd; outline: none; }
+.chart-controls { display: flex; gap: 15px; margin-top: 25px; }
+.chart-controls select { padding: 12px; border-radius: 4px; border: 1px solid #b0bec5; background: white; flex: 1; cursor: pointer; font-size: 1rem; }
+.chart-controls button { flex: 2; padding: 12px; background-color: #01579b; color: white; border: none; border-radius: 4px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.chart-controls button:hover { background-color: #0288d1; }
+.chart-controls button:active { transform: translateY(1px); }
+.chart-display-area { position: relative; height: 450px; width: 100%; max-width: 800px; margin: 0 auto; padding: 20px; background: white; border-radius: 8px; border: 1px solid #eee; }
 
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: 600;
-    color: #37474f;
-    margin-bottom: 5px;
-    font-size: 0.95rem;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #b0bec5;
+/* --- CSS CHO TOOLTIP (MỚI THÊM VÀO) --- */
+#hover-tooltip {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box; /* Để padding không làm vỡ khung */
-    transition: border 0.2s;
-}
-
-.input-group input:focus {
-    border-color: #0277bd;
-    outline: none;
-}
-
-.chart-controls {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.chart-controls select {
-    padding: 12px;
-    border-radius: 4px;
-    border: 1px solid #b0bec5;
-    background: white;
-    flex: 1;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.chart-controls button {
-    flex: 2;
-    padding: 12px;
-    background-color: #01579b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.chart-controls button:hover {
-    background-color: #0288d1;
-}
-
-.chart-controls button:active {
-    transform: translateY(1px);
-}
-
-/* Khung hiển thị biểu đồ */
-.chart-display-area {
-    position: relative;
-    height: 450px; /* Chiều cao cố định cho khung biểu đồ */
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #eee;
+    font-size: 12px;
+    pointer-events: none; /* Quan trọng: không chặn chuột */
+    z-index: 1000;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
